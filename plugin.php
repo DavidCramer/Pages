@@ -451,7 +451,9 @@ class Caldera_Pages {
 		}else {
 			$base = "<?php\r\n/**\r\n * Template Name: ".$title."\r\n *\r\n * Description: \r\n * \r\n * @package Caldera Pages\r\n * @since 	".CALDERA_PAGES."\r\n * @version	1.0\r\n */\r\n?>";
 		}
-
+		if( !file_exists( plugin_dir_path( __FILE__ ) .'templates/' ) ){
+			$wp_filesystem->mkdir( plugin_dir_path( __FILE__ ) .'templates/' );
+		}
 		$wp_filesystem->put_contents( plugin_dir_path( __FILE__ ) .'templates/'.$filename, $base, FS_CHMOD_FILE );
 
 		echo "<ul class=\"template-list\">\r\n";
