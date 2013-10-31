@@ -341,6 +341,9 @@ class Caldera_Pages {
 		// create the key used for the themes cache
 		$cache_key = 'page_templates-' . md5( get_theme_root() . '/' . get_stylesheet() );
 
+		// generate a new cache object
+		get_page_templates();
+
 		// retrive the cache list
 		$templates = wp_cache_get( $cache_key, 'themes' );
 
