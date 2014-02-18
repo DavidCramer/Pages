@@ -313,8 +313,8 @@ textarea.code-area-hidden {display: none;}
   margin: 10px 0 0 10px;
 }
 .nav-bar ul > li {
-  margin: 0 -10px 0 -20px;
-  padding-left: 20px;
+  margin: 0 -10px 0 0;
+  padding: 1px 0 3px 10px;
 }
 .nav-bar ul > li a {
 display: block;
@@ -323,14 +323,14 @@ text-decoration: none;
 }
 .nav-bar li.current,
 .nav-bar ul > li:hover {
-  background: none repeat scroll 0 0 #EDEDED;
+  background: none repeat scroll 0 0 #E7E7E7;
 }
 .nav-bar li.changed {
  background: none repeat scroll 0 0 #D2EBD2; 
 }
 .nav-bar li .save-button {
   display: none;
-  margin: 3px 3px 0 5px;
+  margin: 2px 2px 0 5px;
   float: right;
 }
 .nav-bar li.changed .save-button {

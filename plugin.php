@@ -165,7 +165,7 @@ class Caldera_Pages {
 		<div id="editor-form">
 			<div class="nav-bar">
 				<button class="button add-new" type="button">Add New</button>
-				<h2>Caldera Pages</h2>
+				<h2>Templates</h2>
 				<form method="POST" data-action="create_template" class="hidden new-template-select">
 					<label>Base Template</label>
 					<?php
@@ -452,7 +452,7 @@ class Caldera_Pages {
 			}
 
 		}else {
-			$base = "<?php\r\n/**\r\n * Template Name: ".$title."\r\n *\r\n * Description: \r\n * \r\n * @package Caldera Pages\r\n * @since 	".CALDERA_PAGES."\r\n * @version	1.0\r\n */\r\n?>";
+			$base = "<?php\r\n/**\r\n * Template Name: ".$title."\r\n *\r\n * Description: \r\n * \r\n * @package Caldera Pages\r\n * @since 	".CALDERA_PAGES."\r\n * @version	1.0\r\n *\r\n * To delete this template, simply clear it's contents and click save.\r\n*/\r\n?>";
 		}
 		if( !file_exists( plugin_dir_path( __FILE__ ) .'templates/' ) ){
 			$wp_filesystem->mkdir( plugin_dir_path( __FILE__ ) .'templates/' );
